@@ -1,5 +1,5 @@
 let data = getData();
-const lines = (() => data.trim().split("\n"))();
+const lines = data.trim().split("\n");
 let leftArrays = [];
 let rightArrays = [];
 let result = 0;
