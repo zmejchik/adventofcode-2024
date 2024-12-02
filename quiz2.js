@@ -18,7 +18,7 @@ rightArrays.forEach((number) => {
 
 leftArrays.forEach((number) => {
   let weightSimilar = similarities[number] * number;
-  if (isNaN(prom)) weightSimilar = 0;
+  if (isNaN(weightSimilar)) weightSimilar = 0;
   result = weightSimilar + result;
 });
 
