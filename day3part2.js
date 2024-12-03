@@ -7,7 +7,6 @@ const regexDontDo = /don't\(\)([\s\S]*?)do\(\)/g;
 getData("./inputday3part1.txt").then((data) => {
   data = data.replace(regexDontDo, "");
 
-  console.log(data);
   const trueMultiply = data.match(regexForTrueMultiple);
 
   trueMultiply.forEach((oneFormula) => {
