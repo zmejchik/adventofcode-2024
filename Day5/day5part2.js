@@ -1,7 +1,7 @@
 import {
   rules as rulesImported,
   dataUpdate as dataUpdateImported,
-} from "./inputday5.js";
+} from "../inputday5.js";
 
 let falseUpdate = [];
 //initial data
