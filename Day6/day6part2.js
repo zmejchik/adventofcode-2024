@@ -47,7 +47,7 @@ while (isValidPosition(nextX, nextY)) {
   }
 }
 //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-function findLoopPosition(data2, directionName) {
+function findLoopPosition(data2) {
   let newData = data2;
   for (let i = 0; i < newData.length; i++) {
     for (let j = 0; j < newData[i].length; j++) {
@@ -88,7 +88,7 @@ function findLoopPosition(data2, directionName) {
 }
 
 //================================================================
-result2 = findLoopPosition(data2, directionName);
+result2 = findLoopPosition(data2);
 
 console.log(result);
 console.log(result2);
