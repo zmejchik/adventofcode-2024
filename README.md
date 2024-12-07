@@ -1,14 +1,8 @@
 <details>
   <summary>Day 1</summary>
   
-  Spoiler text. Note that it's important to have a space after the summary tag. You should be able to write any markdown you want inside the `<details>` tag... just make sure you close `<details>` afterward.
-  
-  ```javascript
-  console.log("I'm a code block!");
-  ```
-  
-</details>
 # --- Day 1: Historian Hysteria ---
+
 The Chief Historian is always present for the big Christmas sleigh launch, but nobody has seen him in months! Last anyone heard, he was visiting locations that are historically significant to the North Pole; a group of Senior Historians has asked you to accompany them as they check the places they think he was most likely to visit.
 
 As each location is checked, they will mark it on their list with a star. They figure the Chief Historian must be in one of the first fifty places they'll look, so in order to save Christmas, you need to help them get fifty stars on their list before Santa takes off on December 25th.
@@ -69,8 +63,8 @@ Here are the same example lists again:
 3 3
 For these example lists, here is the process of finding the similarity score:
 
-The first number in the left list is 3. It appears in the right list three times, so the similarity score increases by 3 _ 3 = 9.
-The second number in the left list is 4. It appears in the right list once, so the similarity score increases by 4 _ 1 = 4.
+The first number in the left list is 3. It appears in the right list three times, so the similarity score increases by 3 _3 = 9.
+The second number in the left list is 4. It appears in the right list once, so the similarity score increases by 4_ 1 = 4.
 The third number in the left list is 2. It does not appear in the right list, so the similarity score does not increase (2 \* 0 = 0).
 The fourth number, 1, also does not appear in the right list.
 The fifth number, 3, appears in the right list three times; the similarity score increases by 9.
@@ -83,7 +77,11 @@ Your puzzle answer was 28786472.
 
 Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
-# --- Day 2: Red-Nosed Reports ---
+</details>
+
+<details>
+  <summary>Day 2</summary>
+    # --- Day 2: Red-Nosed Reports ---
 
 Fortunately, the first location The Historians want to search isn't a long walk from the Chief Historian's office.
 
@@ -153,7 +151,10 @@ If you still want to see it, you can get your puzzle input.
 
 You can also [Share] this puzzle.
 
-# --- Day 3: Mull It Over ---
+</details>
+<details>
+  <summary>Day 3</summary>
+  # --- Day 3: Mull It Over ---
 
 "Our computers are having issues, so I have no idea if we have any Chief Historians in stock! You're welcome to check the warehouse, though," says the mildly flustered shopkeeper at the North Pole Toboggan Rental Shop. The Historians head out to take a look.
 
@@ -201,7 +202,10 @@ At this point, you should return to your Advent calendar and try another puzzle.
 
 If you still want to see it, you can get your puzzle input.
 
-# --- Day 4: Ceres Search ---
+</details>
+<details>
+  <summary>Day 4</summary>
+  # --- Day 4: Ceres Search ---
 
 "Looks like the Chief's not here. Next!" One of The Historians pulls out a device and pushes the only button on it. After a brief flash, you recognize the interior of the Ceres monitoring station!
 
@@ -277,7 +281,10 @@ At this point, you should return to your Advent calendar and try another puzzle.
 
 If you still want to see it, you can get your puzzle input.
 
-# --- Day 5: Print Queue ---
+</details>
+<details>
+  <summary>Day 5</summary>
+  # --- Day 5: Print Queue ---
 
 Satisfied with their search on Ceres, the squadron of scholars suggests subsequently scanning the stationery stacks of sub-basement 17.
 
@@ -369,7 +376,12 @@ After taking only the incorrectly-ordered updates and ordering them correctly, t
 Find the updates which are not in the correct order. What do you get if you add up the middle page numbers after correctly ordering just those updates?
 
 Your puzzle answer was 4655.
-# --- Day 6: Guard Gallivant ---
+
+</details>
+<details>
+  <summary>Day 6</summary>
+  # --- Day 6: Guard Gallivant ---
+
 The Historians use their fancy device again, this time to whisk you all away to the North Pole prototype suit manufacturing lab... in the year 1518! It turns out that having direct access to history is very convenient for a group of historians.
 
 You still have to be careful of time paradoxes, and so it will be important to avoid anyone from 1518 while The Historians search for the Chief. Unfortunately, a single guard is patrolling this part of the lab.
@@ -386,7 +398,9 @@ You start by making a map (your puzzle input) of the situation. For example:
 ..........
 .#..^.....
 ........#.
-#.........
+
+# .........
+
 ......#...
 The map shows the current position of the guard with ^ (to indicate the guard is currently facing up from the perspective of the map). Any obstructions - crates, desks, alchemical reactors, etc. - are shown as #.
 
@@ -404,7 +418,9 @@ Following the above protocol, the guard moves up several times until she reaches
 ..........
 .#........
 ........#.
-#.........
+
+# .........
+
 ......#...
 Because there is now an obstacle in front of the guard, she turns right before continuing straight in her new facing direction:
 
@@ -416,7 +432,9 @@ Because there is now an obstacle in front of the guard, she turns right before c
 ..........
 .#........
 ........#.
-#.........
+
+# .........
+
 ......#...
 Reaching another obstacle (a spool of several very long polymers), she turns right again and continues downward:
 
@@ -428,7 +446,9 @@ Reaching another obstacle (a spool of several very long polymers), she turns rig
 ..........
 .#......v.
 ........#.
-#.........
+
+# .........
+
 ......#...
 This process continues for a while, but the guard eventually leaves the mapped area (after walking past a tank of universal solvent):
 
@@ -440,7 +460,9 @@ This process continues for a while, but the guard eventually leaves the mapped a
 ..........
 .#........
 ........#.
-#.........
+
+# .........
+
 ......#v..
 By predicting the guard's route, you can determine which specific positions in the lab will be in the patrol path. Including the guard's starting position, the positions visited by the guard before leaving the area are marked with an X:
 
@@ -452,7 +474,9 @@ By predicting the guard's route, you can determine which specific positions in t
 ..X.X.X.X.
 .#XXXXXXX.
 .XXXXXXX#.
-#XXXXXXX..
+
+# XXXXXXX..
+
 ......#X..
 In this example, the guard will visit 41 distinct positions on your map.
 
@@ -461,6 +485,7 @@ Predict the path of the guard. How many distinct positions will the guard visit 
 Your puzzle answer was 4515.
 
 ## --- Part Two ---
+
 While The Historians begin working around the guard's patrol route, you borrow their fancy device and step outside the lab. From the safety of a supply closet, you time travel through the last few months and record the nightly status of the lab's guard post on the walls of the closet.
 
 Returning after what seems like only a few seconds to The Historians, they explain that the guard's patrol area is simply too large for them to safely search the lab without getting caught.
@@ -481,10 +506,11 @@ Option one, put a printing press next to the guard's starting position:
 ....|...|.
 .#.O^---+.
 ........#.
-#.........
+
+# .........
+
 ......#...
 Option two, put a stack of failed suit prototypes in the bottom right quadrant of the mapped area:
-
 
 ....#.....
 ....+---+#
@@ -494,7 +520,9 @@ Option two, put a stack of failed suit prototypes in the bottom right quadrant o
 ..|.|.|.|.
 .#+-^-+-+.
 ......O.#.
-#.........
+
+# .........
+
 ......#...
 Option three, put a crate of chimney-squeeze prototype fabric next to the standing desk in the bottom right quadrant:
 
@@ -506,7 +534,9 @@ Option three, put a crate of chimney-squeeze prototype fabric next to the standi
 ..|.|.|.|.
 .#+-^-+-+.
 .+----+O#.
-#+----+...
+
+# +----+...
+
 ......#...
 Option four, put an alchemical retroencabulator near the bottom left corner:
 
@@ -518,7 +548,9 @@ Option four, put an alchemical retroencabulator near the bottom left corner:
 ..|.|.|.|.
 .#+-^-+-+.
 ..|...|.#.
-#O+---+...
+
+# O+---+...
+
 ......#...
 Option five, put the alchemical retroencabulator a bit to the right instead:
 
@@ -530,7 +562,9 @@ Option five, put the alchemical retroencabulator a bit to the right instead:
 ..|.|.|.|.
 .#+-^-+-+.
 ....|.|.#.
-#..O+-+...
+
+# ..O+-+...
+
 ......#...
 Option six, put a tank of sovereign glue right next to the tank of universal solvent:
 
@@ -542,7 +576,9 @@ Option six, put a tank of sovereign glue right next to the tank of universal sol
 ..|.|.|.|.
 .#+-^-+-+.
 .+----++#.
-#+----++..
+
+# +----++..
+
 ......#O..
 It doesn't really matter what you choose to use as an obstacle so long as you and The Historians can put it into position without the guard noticing. The important thing is having enough options that you can find one that minimizes time paradoxes, and in this example, there are 6 different positions you could choose.
 
@@ -558,11 +594,16 @@ If you still want to see it, you can get your puzzle input.
 
 You can also [Share] this puzzle.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
 At this point, you should return to your Advent calendar and try another puzzle.
 
-# --- Day 7: Bridge Repair ---
+</details>
+
+<details>
+  <summary>Day 7</summary>
+  # --- Day 7: Bridge Repair ---
+
 The Historians take you to a familiar rope bridge over a river in the middle of a jungle. The Chief isn't on this side of the bridge, though; maybe he's on the other side?
 
 When you go to cross the bridge, you notice a group of engineers trying to repair it. (Apparently, it breaks pretty frequently.) You won't be able to cross until it's fixed.
@@ -582,13 +623,13 @@ For example:
 292: 11 6 16 20
 Each line represents a single equation. The test value appears before the colon on each line; it is your job to determine whether the remaining numbers can be combined with operators to produce the test value.
 
-Operators are always evaluated left-to-right, not according to precedence rules. Furthermore, numbers in the equations cannot be rearranged. Glancing into the jungle, you can see elephants holding two different types of operators: add (+) and multiply (*).
+Operators are always evaluated left-to-right, not according to precedence rules. Furthermore, numbers in the equations cannot be rearranged. Glancing into the jungle, you can see elephants holding two different types of operators: add (+) and multiply (\*).
 
 Only three of the above equations can be made true by inserting operators:
 
-190: 10 19 has only one position that accepts an operator: between 10 and 19. Choosing + would give 29, but choosing * would give the test value (10 * 19 = 190).
-3267: 81 40 27 has two positions for operators. Of the four possible configurations of the operators, two cause the right side to match the test value: 81 + 40 * 27 and 81 * 40 + 27 both equal 3267 (when evaluated left-to-right)!
-292: 11 6 16 20 can be solved in exactly one way: 11 + 6 * 16 + 20.
+190: 10 19 has only one position that accepts an operator: between 10 and 19. Choosing + would give 29, but choosing _would give the test value (10_ 19 = 190).
+3267: 81 40 27 has two positions for operators. Of the four possible configurations of the operators, two cause the right side to match the test value: 81 + 40 _27 and 81_ 40 + 27 both equal 3267 (when evaluated left-to-right)!
+292: 11 6 16 20 can be solved in exactly one way: 11 + 6 \* 16 + 20.
 The engineers just need the total calibration result, which is the sum of the test values from just the equations that could possibly be true. In the above example, the sum of the test values for the three equations listed above is 3749.
 
 Determine which equations could possibly be true. What is their total calibration result?
@@ -596,6 +637,7 @@ Determine which equations could possibly be true. What is their total calibratio
 Your puzzle answer was 3598800864292.
 
 ## --- Part Two ---
+
 The engineers seem concerned; the total calibration result you gave them is nowhere close to being within safety tolerances. Just then, you spot your mistake: some well-hidden elephants are holding a third type of operator.
 
 The concatenation operator (||) combines the digits from its left and right inputs into a single number. For example, 12 || 345 would become 12345. All operators are still evaluated left-to-right.
@@ -603,15 +645,15 @@ The concatenation operator (||) combines the digits from its left and right inpu
 Now, apart from the three equations that could be made true using only addition and multiplication, the above example has three more equations that can be made true by inserting operators:
 
 156: 15 6 can be made true through a single concatenation: 15 || 6 = 156.
-7290: 6 8 6 15 can be made true using 6 * 8 || 6 * 15.
+7290: 6 8 6 15 can be made true using 6 _8 || 6_ 15.
 192: 17 8 14 can be made true using 17 || 8 + 14.
-Adding up all six test values (the three that could be made before using only + and * plus the new three that can now be made by also using ||) produces the new total calibration result of 11387.
+Adding up all six test values (the three that could be made before using only + and \* plus the new three that can now be made by also using ||) produces the new total calibration result of 11387.
 
 Using your new knowledge of elephant hiding spots, determine which equations could possibly be true. What is their total calibration result?
 
 Your puzzle answer was 340362529351427.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
 At this point, you should return to your Advent calendar and try another puzzle.
 
@@ -620,3 +662,18 @@ If you still want to see it, you can get your puzzle input.
 You can also [Share] this puzzle.
 
 If you still want to see it, you can get your puzzle input.
+
+</details>
+
+<details>
+  <summary>Day 8</summary>
+  
+</details>
+<details>
+  <summary>Day 9</summary>
+  
+</details>
+<details>
+  <summary>Day 10</summary>
+  
+</details>
