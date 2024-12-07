@@ -1,3 +1,13 @@
+<details>
+  <summary>Day 1</summary>
+  
+  Spoiler text. Note that it's important to have a space after the summary tag. You should be able to write any markdown you want inside the `<details>` tag... just make sure you close `<details>` afterward.
+  
+  ```javascript
+  console.log("I'm a code block!");
+  ```
+  
+</details>
 # --- Day 1: Historian Hysteria ---
 The Chief Historian is always present for the big Christmas sleigh launch, but nobody has seen him in months! Last anyone heard, he was visiting locations that are historically significant to the North Pole; a group of Senior Historians has asked you to accompany them as they check the places they think he was most likely to visit.
 
@@ -15,12 +25,12 @@ There's just one problem: by holding the two lists up side by side (your puzzle 
 
 For example:
 
-3   4
-4   3
-2   5
-1   3
-3   9
-3   3
+3 4
+4 3
+2 5
+1 3
+3 9
+3 3
 Maybe the lists are only off by a small amount! To find out, pair up the numbers and measure how far apart they are. Pair up the smallest number in the left list with the smallest number in the right list, then the second-smallest left number with the second-smallest right number, and so on.
 
 Within each pair, figure out how far apart the two numbers are; you'll need to add up all of those distances. For example, if you pair up a 3 from the left list with a 7 from the right list, the distance apart is 4; if you pair up a 9 with a 3, the distance apart is 6.
@@ -40,6 +50,7 @@ Your actual left and right lists contain many location IDs. What is the total di
 Your puzzle answer was 2430334.
 
 ## --- Part Two ---
+
 Your analysis only confirmed what everyone feared: the two lists of location IDs are indeed very different.
 
 Or are they?
@@ -50,17 +61,17 @@ This time, you'll need to figure out exactly how often each number from the left
 
 Here are the same example lists again:
 
-3   4
-4   3
-2   5
-1   3
-3   9
-3   3
+3 4
+4 3
+2 5
+1 3
+3 9
+3 3
 For these example lists, here is the process of finding the similarity score:
 
-The first number in the left list is 3. It appears in the right list three times, so the similarity score increases by 3 * 3 = 9.
-The second number in the left list is 4. It appears in the right list once, so the similarity score increases by 4 * 1 = 4.
-The third number in the left list is 2. It does not appear in the right list, so the similarity score does not increase (2 * 0 = 0).
+The first number in the left list is 3. It appears in the right list three times, so the similarity score increases by 3 _ 3 = 9.
+The second number in the left list is 4. It appears in the right list once, so the similarity score increases by 4 _ 1 = 4.
+The third number in the left list is 2. It does not appear in the right list, so the similarity score does not increase (2 \* 0 = 0).
 The fourth number, 1, also does not appear in the right list.
 The fifth number, 3, appears in the right list three times; the similarity score increases by 9.
 The last number, 3, appears in the right list three times; the similarity score again increases by 9.
@@ -70,8 +81,10 @@ Once again consider your left and right lists. What is their similarity score?
 
 Your puzzle answer was 28786472.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
+
 # --- Day 2: Red-Nosed Reports ---
+
 Fortunately, the first location The Historians want to search isn't a long walk from the Chief Historian's office.
 
 While the Red-Nosed Reindeer nuclear fusion/fission plant appears to contain no sign of the Chief Historian, the engineers there run up to you as soon as they see you. Apparently, they still talk about the time Rudolph was saved through molecular synthesis from a single electron.
@@ -107,6 +120,7 @@ Analyze the unusual data from the engineers. How many reports are safe?
 Your puzzle answer was 314.
 
 ## --- Part Two ---
+
 The engineers are surprised by the low number of safe reports until they realize they forgot to tell you about the Problem Dampener.
 
 The Problem Dampener is a reactor-mounted module that lets the reactor safety systems tolerate a single bad level in what would otherwise be a safe report. It's like the bad level never happened!
@@ -127,7 +141,7 @@ Update your analysis by handling situations where the Problem Dampener can remov
 
 Your puzzle answer was 373.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
 At this point, you should return to your Advent calendar and try another puzzle.
 
@@ -138,7 +152,9 @@ At this point, you should return to your Advent calendar and try another puzzle.
 If you still want to see it, you can get your puzzle input.
 
 You can also [Share] this puzzle.
+
 # --- Day 3: Mull It Over ---
+
 "Our computers are having issues, so I have no idea if we have any Chief Historians in stock! You're welcome to check the warehouse, though," says the mildly flustered shopkeeper at the North Pole Toboggan Rental Shop. The Historians head out to take a look.
 
 The shopkeeper turns to you. "Any chance you can see why our computers are having issues again?"
@@ -147,7 +163,7 @@ The computer appears to be trying to run a program, but its memory (your puzzle 
 
 It seems like the goal of the program is just to multiply some numbers. It does that with instructions like mul(X,Y), where X and Y are each 1-3 digit numbers. For instance, mul(44,46) multiplies 44 by 46 to get a result of 2024. Similarly, mul(123,4) would multiply 123 by 4.
 
-However, because the program's memory has been corrupted, there are also many invalid characters that should be ignored, even if they look like part of a mul instruction. Sequences like mul(4*, mul(6,9!, ?(12,34), or mul ( 2 , 4 ) do nothing.
+However, because the program's memory has been corrupted, there are also many invalid characters that should be ignored, even if they look like part of a mul instruction. Sequences like mul(4\*, mul(6,9!, ?(12,34), or mul ( 2 , 4 ) do nothing.
 
 For example, consider the following section of corrupted memory:
 
@@ -159,6 +175,7 @@ Scan the corrupted memory for uncorrupted mul instructions. What do you get if y
 Your puzzle answer was 191183308.
 
 ## --- Part Two ---
+
 As you scan through the corrupted memory, you notice that some of the conditional statements are also still intact. If you handle some of the uncorrupted conditional statements in the program, you might be able to get an even more accurate result.
 
 There are two new instructions you'll need to handle:
@@ -169,7 +186,7 @@ Only the most recent do() or don't() instruction applies. At the beginning of th
 
 For example:
 
-xmul(2,4)&mul[3,7]!^don't()_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))
+xmul(2,4)&mul[3,7]!^don't()\_mul(5,5)+mul(32,64](mul(11,8)undo()?mul(8,5))
 This corrupted memory is similar to the example from before, but this time the mul(5,5) and mul(11,8) instructions are disabled because there is a don't() instruction before them. The other mul instructions function normally, including the one at the end that gets re-enabled by a do() instruction.
 
 This time, the sum of the results is 48 (2*4 + 8*5).
@@ -178,18 +195,19 @@ Handle the new instructions; what do you get if you add up all of the results of
 
 Your puzzle answer was 92082041.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
 At this point, you should return to your Advent calendar and try another puzzle.
 
 If you still want to see it, you can get your puzzle input.
+
 # --- Day 4: Ceres Search ---
+
 "Looks like the Chief's not here. Next!" One of The Historians pulls out a device and pushes the only button on it. After a brief flash, you recognize the interior of the Ceres monitoring station!
 
 As the search for the Chief continues, a small Elf who lives on the station tugs on your shirt; she'd like to know if you could help her with her word search (your puzzle input). She only has to find one word: XMAS.
 
 This word search allows words to be horizontal, vertical, diagonal, written backwards, or even overlapping other words. It's a little unusual, though, as you don't merely need to find one instance of XMAS - you need to find all of them. Here are a few ways XMAS might appear, where irrelevant characters have been replaced with .:
-
 
 ..X...
 .SAMX.
@@ -225,6 +243,7 @@ Take a look at the little Elf's word search. How many times does XMAS appear?
 Your puzzle answer was 2551.
 
 ## --- Part Two ---
+
 The Elf looks quizzically at you. Did you misunderstand the assignment?
 
 Looking for the instructions, you flip over the word search to find that this isn't actually an XMAS puzzle; it's an X-MAS puzzle in which you're supposed to find two MAS in the shape of an X. One way to achieve that is like this:
@@ -252,12 +271,14 @@ Flip the word search from the instructions back over to the word search side and
 
 Your puzzle answer was 1985.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
 At this point, you should return to your Advent calendar and try another puzzle.
 
 If you still want to see it, you can get your puzzle input.
+
 # --- Day 5: Print Queue ---
+
 Satisfied with their search on Ceres, the squadron of scholars suggests subsequently scanning the stationery stacks of sub-basement 17.
 
 The North Pole printing department is busier than ever this close to Christmas, and while The Historians continue their search of this historically significant facility, an Elf operating a very familiar printer beckons you over.
@@ -335,6 +356,7 @@ Determine which updates are already in the correct order. What do you get if you
 Your puzzle answer was 4959.
 
 ## --- Part Two ---
+
 While the Elves get to work printing the correctly-ordered updates, you have a little time to fix the rest of them.
 
 For each of the incorrectly-ordered updates, use the page ordering rules to put the page numbers in the right order. For the above example, here are the three incorrectly-ordered updates and their correct orderings:
@@ -348,7 +370,7 @@ Find the updates which are not in the correct order. What do you get if you add 
 
 Your puzzle answer was 4655.
 
-Both parts of this puzzle are complete! They provide two gold stars: **
+Both parts of this puzzle are complete! They provide two gold stars: \*\*
 
 At this point, you should return to your Advent calendar and try another puzzle.
 
