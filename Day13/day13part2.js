@@ -4,7 +4,6 @@ const dataSolvigs = initialDate.split("\n\n");
 let sum = 0;
 dataSolvigs.forEach((solve) => {
   const coeficients = extractCoefficients(solve);
-
   const equation = solveLinearSystemWithMinCondition(
     coeficients.a,
     coeficients.b,
@@ -13,14 +12,15 @@ dataSolvigs.forEach((solve) => {
     coeficients.b1,
     coeficients.c1
   );
-  console.log(equation);
   sum += equation.x * 3 + equation.y;
 });
 console.log(sum);
 function solveLinearSystemWithMinCondition(a, b, c, a1, b1, c1) {
   const determinant = a * b1 - a1 * b;
+  const determinantX = c * b1 - c1 * b;
+  const determinantY = a * c1 - a1 * c;
 
-  if (determinant === 0) {
+  if (determinant === 0 && determinantX !== 0 && determinantY !== 0) {
     let minSolution = null;
     let minValue = Infinity;
 
@@ -39,8 +39,8 @@ function solveLinearSystemWithMinCondition(a, b, c, a1, b1, c1) {
     return minSolution;
   }
 
-  const x = (c * b1 - c1 * b) / determinant;
-  const y = (a * c1 - a1 * c) / determinant;
+  const x = determinantX / determinant;
+  const y = determinantY / determinant;
 
   if (x < 0 || y < 0 || !Number.isInteger(x) || !Number.isInteger(y)) {
     return { x: 0, y: 0 };
@@ -52,8 +52,8 @@ function extractCoefficients(input) {
   const regex =
     /Button A: X\+([0-9]+), Y\+([0-9]+)\nButton B: X\+([0-9]+), Y\+([0-9]+)\nPrize: X=([0-9]+), Y=([0-9]+)/;
   const match = regex.exec(input);
-  match[5] = 10000000000000n + match[5];
-  match[6] = 10000000000000n + match[6];
+  match[5] = 10000000000000 + parseInt(match[5], 10);
+  match[6] = 10000000000000 + parseInt(match[6], 10);
   if (match) {
     return {
       a: parseInt(match[1], 10),
